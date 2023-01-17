@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/record_item_uuid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="uuid"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/record_item_artist_uuid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="artist uuid"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@+id/record_item_description"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/record_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        app:layout_constraintStart_toStartOf="@+id/record_item_uuid"
+        app:layout_constraintTop_toBottomOf="@+id/record_item_uuid" />
+
+    <TextView
+        android:id="@+id/record_item_number_of_plays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="plays"
+        app:layout_constraintStart_toStartOf="@+id/record_item_uuid"
+        app:layout_constraintTop_toBottomOf="@+id/record_item_title" />
+
+    <TextView
+        android:id="@+id/record_item_number_of_moons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="moons"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/record_item_number_of_plays"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/record_item_voice_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="voice"
+        app:layout_constraintStart_toStartOf="@+id/record_item_number_of_moons"
+        app:layout_constraintTop_toBottomOf="@+id/record_item_number_of_moons" />
+
+    <TextView
+        android:id="@+id/record_item_kind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kind"
+        app:layout_constraintStart_toStartOf="@+id/record_item_voice_style"
+        app:layout_constraintTop_toBottomOf="@+id/record_item_voice_style" />
+
+    <TextView
+        android:id="@+id/record_item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="description"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@+id/record_item_number_of_moons"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/record_item_created_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="created"
+        app:layout_constraintStart_toStartOf="@+id/record_item_description"
+        app:layout_constraintTop_toBottomOf="@+id/record_item_description" />
+
+    <TextView
+        android:id="@+id/record_item_updated_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="updated"
+        app:layout_constraintStart_toStartOf="@+id/record_item_description"
+        app:layout_constraintTop_toBottomOf="@+id/record_item_created_at" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

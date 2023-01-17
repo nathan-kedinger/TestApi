@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <Button
+            android:id="@+id/read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/read" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update" />
+
+        <EditText
+            android:id="@+id/edit_text_uuid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="uuid"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/recycler" />
+
+        <EditText
+            android:id="@+id/edit_text_artist_uuid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="artist_uuid"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_uuid" />
+
+        <EditText
+            android:id="@+id/edit_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_artist_uuid" />
+
+        <EditText
+            android:id="@+id/edit_text_number_of_plays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="plays"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_title" />
+
+        <EditText
+            android:id="@+id/edit_text_number_of_moons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="moons"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_number_of_plays" />
+
+        <EditText
+            android:id="@+id/edit_text_voice_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="voice"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_number_of_moons" />
+
+        <EditText
+            android:id="@+id/edit_text_kind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kind"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_voice_style" />
+
+        <EditText
+            android:id="@+id/edit_text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="description"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_kind"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/edit_text_created_at"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="created"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_description" />
+
+        <EditText
+            android:id="@+id/edit_text_updated_at"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="updated"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_created_at" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/delete" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/record_one_item_uuid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="uuid"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/record_one_item_artist_uuid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="artist uuid"
+                app:layout_constraintStart_toEndOf="@+id/record_one_item_description"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/record_one_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                app:layout_constraintStart_toStartOf="@+id/record_one_item_uuid"
+                app:layout_constraintTop_toBottomOf="@+id/record_one_item_uuid" />
+
+            <TextView
+                android:id="@+id/record_one_item_number_of_plays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="plays"
+                app:layout_constraintStart_toStartOf="@+id/record_one_item_uuid"
+                app:layout_constraintTop_toBottomOf="@+id/record_one_item_title" />
+
+            <TextView
+                android:id="@+id/record_one_item_number_of_moons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="moons"
+                app:layout_constraintStart_toEndOf="@+id/record_one_item_number_of_plays"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/record_one_item_voice_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="voice"
+                app:layout_constraintStart_toStartOf="@+id/record_one_item_number_of_moons"
+                app:layout_constraintTop_toBottomOf="@+id/record_one_item_number_of_moons" />
+
+            <TextView
+                android:id="@+id/record_one_item_kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kind"
+                app:layout_constraintStart_toStartOf="@+id/record_one_item_voice_style"
+                app:layout_constraintTop_toBottomOf="@+id/record_one_item_voice_style" />
+
+            <TextView
+                android:id="@+id/record_one_item_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="description"
+                app:layout_constraintStart_toEndOf="@+id/record_one_item_number_of_moons"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/record_one_item_created_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="created"
+                app:layout_constraintStart_toStartOf="@+id/record_one_item_description"
+                app:layout_constraintTop_toBottomOf="@+id/record_one_item_description" />
+
+            <TextView
+                android:id="@+id/record_one_item_updated_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="updated"
+                app:layout_constraintStart_toStartOf="@+id/record_one_item_description"
+                app:layout_constraintTop_toBottomOf="@+id/record_one_item_created_at" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
