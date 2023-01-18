@@ -19,7 +19,7 @@ class MainViewModel: ViewModel() {
             try {
                 val response = repository.createRecordData(record)
                 if (response.isSuccessful) {
-                    // traitement de la réponse
+                    // Handle response
                 } else {
                     when (response.code()) {
                         in 400..499 -> {

@@ -1,6 +1,8 @@
 package com.example.testapi
 
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -49,7 +51,6 @@ class MainActivity : AppCompatActivity() {
                 created_at = findViewById<EditText>(R.id.edit_text_created_at).text.toString(),
                 updated_at = findViewById<EditText>(R.id.edit_text_updated_at).text.toString()
             )
-
             viewModel.createRecord(record)
         }
 
@@ -76,6 +77,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.record.observe(this, Observer { record ->
+            Log.i(ContentValues.TAG, record.toString())
             if (record != null) {
                 findViewById<TextView>(R.id.record_one_item_uuid).text = record.uuid
                 findViewById<TextView>(R.id.record_one_item_artist_uuid).text = record.artist_uuid
@@ -111,6 +113,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.updateRecord(record)
     }
 
+        // DELETE
         delete.setOnClickListener{
             viewModel.deleteRecord(
                 recordUuid = findViewById<EditText>(R.id.edit_text_uuid).text.toString())
